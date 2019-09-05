@@ -5,7 +5,7 @@ gem 'pg', '~> 0.11'
 gem 'jquery-rails'
 gem 'bootstrap-datepicker-rails'
 gem 'uglifier'
-gem 'sprockets-rails'
+gem 'sprockets-rails', '2.12.5'
 
 group :test, :development do
   gem "pry"
