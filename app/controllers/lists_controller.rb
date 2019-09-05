@@ -12,7 +12,7 @@ class ListsController < ApplicationController
     if request_is_json?
       render :json => { status: 200, list: List.find(params[:id]) }
     else
-      @list = List.find(params[:id])
+      @list = List.find(params[:id].to_int)
     end
   end
 
