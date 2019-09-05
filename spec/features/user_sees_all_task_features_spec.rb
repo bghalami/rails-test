@@ -9,7 +9,7 @@ describe "as a user" do
 
       visit list_tasks_path(list_1)
 
-      expect(page).to have_content("List Tasks")
+      expect(page).to have_content("#{list_1.title} Tasks")
       expect(page).to have_content("Name")
       expect(page).to have_link("Due Date↓")
       expect(page).to have_content("Complete?")
