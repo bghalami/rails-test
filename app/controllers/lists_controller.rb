@@ -9,7 +9,11 @@ class ListsController < ApplicationController
 
   # GET /lists/1
   def show
+    if request_is_json?
+      render :json => { status: 200, list: List.find(params[:id]) }
+    else
       @list = List.find(params[:id])
+    end
   end
 
   # GET /lists/new
